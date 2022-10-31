@@ -21,11 +21,11 @@ class CommentAdmin(admin.ModelAdmin):
 
     list_display = (
         'last_name',
-        'last_name'
+        'first_name'
     )
 
     search_fields = (
         'last_name',
-        'last_name'
+        'first_name'
     )
     empty_value_display = '-пусто-'

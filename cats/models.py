@@ -12,7 +12,7 @@ class Owner(models.Model):
 class Cat(models.Model):
     name = models.CharField(max_length=16)
     color = models.CharField(max_length=16)
-    birth_year = models.IntegerField(blank=True, null=True)
+    birth_year = models.IntegerField()
     owner = models.ForeignKey(
         Owner, related_name='cats', on_delete=models.CASCADE)
 
