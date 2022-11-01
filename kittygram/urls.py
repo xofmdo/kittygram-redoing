@@ -1,4 +1,5 @@
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views
 from django.contrib import admin
 from django.urls import include, path
 
@@ -10,6 +11,7 @@ router.register('owners', OwnerViewSet)
 router.register(r'mycats', LightCatViewSet)
 
 urlpatterns = [
+    path('api-token-auth/', views.obtain_auth_token),
     path('', include(router.urls), name='api-root'),
     path('admin/', admin.site.urls),
 ]
